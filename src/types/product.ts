@@ -1,4 +1,9 @@
-export type product {
+export type user =  {
     id: number;
-    title: string;
+    firstName: string;
+    secondName: string;
+    email: string;
+    role: string;
+    lastActive: number;
+    status: string;
 }
