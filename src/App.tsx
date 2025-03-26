@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import { user } from "./types/product";
-import { method, useApi } from "./hooks/useApi";
+import { useApi } from "./hooks/useApi";
+import { method } from "./types/methodsApi";
 
 function App() {
   const [users, setUsers] = useState([]);

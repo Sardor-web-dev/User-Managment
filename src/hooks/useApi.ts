@@ -1,13 +1,6 @@
+import { method } from "@/types/methodsApi";
 import axios, { AxiosRequestHeaders } from "axios";
 import { useCallback, useState } from "react";
-
-export enum method {
-  get = "get",
-  put = "put",
-  post = "post",
-  patch = "patch",
-  delete = "delete",
-}
 
 export const useApi = (baseUrl: string) => {
   const [error, setError] = useState(false);
@@ -17,7 +10,7 @@ export const useApi = (baseUrl: string) => {
       path: string,
       method: method,
       body?: unknown,
-      headers?: AxiosRequestHeaders
+      headers?: AxiosRequestHeaders,
     ) => {
       setLoading(true);
       try {
@@ -39,46 +32,3 @@ export const useApi = (baseUrl: string) => {
   );
   return { fetchData, error, loading };
 };
-
-
-
-
-
-// import axios, { AxiosRequestHeaders } from "axios";
-// import { useCallback, useState } from "react";
-
-// export enum method {
-//   get = "get",
-//   put = "put",
-//   post = "post",
-//   patch = "patch",
-//   delete = "delete",
-// }
-
-// export const useApi = (baseUrl: string) => {
-//   const [error, setError] = useState(false);
-//   const [loading, setLoading] = useState(false);
-//   const fetchData = useCallback (
-//     async (
-//       path: string,
-//       method: method,
-//       body?: unknown,
-//       headers?: AxiosRequestHeaders,
-//     ) => {
-//       setLoading(true);
-//       try {
-//         const res = await axios[method](baseUrl + path, {
-//           data: body,
-//           headers: headers,
-//         });
-//         if (res.status !== 200 && res.status !== 201) {
-//         setError(true)
-//           throw new Error("Something went wrong");
-//         }
-//         setLoading(false)
-//       }
-//     },
-//     [baseUrl]
-//   );
-//   return { fetchData, error, loading };
-// };
