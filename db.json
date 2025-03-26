@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "status": "Active",
+      "role": "Admin"
+    },
+    {
+      "id": "2",
+      "name": "Jane Doe",
+      "email": "jane@example.com",
+      "status": "Inactive",
+      "role": "Editor"
+    },
+    {
+      "id": "3",
+      "name": "Alice Smith",
+      "email": "alice@example.com",
+      "status": "Pending",
+      "role": "Viewer"
+    },
+    {
+      "id": "4",
+      "name": "Bob Brown",
+      "email": "bob@example.com",
+      "status": "Active",
+      "role": "Admin"
+    },
+    {
+      "id": "5",
+      "name": "Charlie Johnson",
+      "email": "charlie@example.com",
+      "status": "Inactive",
+      "role": "Editor"
+    },
+    {
+      "id": "6",
+      "name": "David Wilson",
+      "email": "david@example.com",
+      "status": "Pending",
+      "role": "Viewer"
+    }
+  ]
+}

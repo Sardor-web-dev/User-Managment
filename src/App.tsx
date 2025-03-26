@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import "./App.css";
-import { user } from "./types/product";
+import { user } from "./types/user";
 import { useApi } from "./hooks/useApi";
 import { method } from "./types/methodsApi";
+import { UsersProvider } from "./contexts/UserContext";
+import UsersTable from "./components/custom/UsersTable";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -16,7 +17,7 @@ function App() {
 
   return (
     <>
-      <ul>
+      {/* <ul>
         {loading && <li>Loading...</li>}
         {users?.length > 0 ? (
           users.map((user: user) => (
@@ -25,7 +26,10 @@ function App() {
         ) : (
           <li>{error && "Something went wrong"}</li>
         )}
-      </ul>
+      </ul> */}
+          <UsersProvider>
+      <UsersTable />
+    </UsersProvider>
     </>
   );
 }
