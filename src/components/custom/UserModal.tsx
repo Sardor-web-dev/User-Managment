@@ -5,6 +5,8 @@ import { Input } from "@/components/ui/input";
 import { useUsers } from "@/contexts/UserContext";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { user } from "@/types/user";
+// import { useApi } from "@/hooks/useApi";
+// import { method } from "@/types/methodsApi";
 
 interface UserModalProps {
   isOpen: boolean;
@@ -15,6 +17,16 @@ interface UserModalProps {
 export default function UserModal({ isOpen, onClose, user }: UserModalProps) {
   const { addUser, editUser } = useUsers();
   const isEditing = !!user;
+//   const { fetchData, error, } = useApi(import.meta.env.VITE_PUBLIC_API);
+
+//   useEffect(() => {
+//     fetchData("", method.put).then((res) =>
+//       setUsers(res?.data)
+//     );
+//   }, []);
+//   <>
+//   <li>{error}</li>
+//   </>
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");

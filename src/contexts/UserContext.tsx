@@ -8,7 +8,7 @@ const UserContext = createContext<UsersContextType | undefined>(undefined);
 
 export function UsersProvider({ children }: { children: React.ReactNode }) {
   const [users, setUsers] = useState<user[]>([]);
-  const { fetchData, error, loading  } = useApi(import.meta.env.VITE_PUBLIC_API);
+  const { fetchData, error, } = useApi(import.meta.env.VITE_PUBLIC_API);
 
   useEffect(() => {
     fetchData("", method.get).then((res) =>
