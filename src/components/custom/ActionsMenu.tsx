@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Pencil, Trash } from "lucide-react";
 import { useUsers } from "@/contexts/UserContext";
 
-const ActionsMenu = ({ userId, onEdit }: { userId: any; onEdit: (id: number) => void }) => {
+const ActionsMenu = ({ userId, onEdit }: { userId: number; onEdit: (id: number) => void }) => {
   const { deleteUser } = useUsers();
 
   return (
@@ -12,7 +12,7 @@ const ActionsMenu = ({ userId, onEdit }: { userId: any; onEdit: (id: number) => 
         <Button variant="ghost">Actions</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => onEdit(userId)}>UsersContext";text";
+        <DropdownMenuItem onClick={() => onEdit(userId)}>
           <Pencil className="mr-2 h-4 w-4" />
           Edit
         </DropdownMenuItem>
